@@ -15,6 +15,8 @@ Created on Mon Mar 31 13:30:06 2025
 @author: Никифорова О.В.
 """# -*- coding: utf-8 -*-
 
+import numpy as np
+
 # Функция сложения любого количества аргументов
 def add(*args):
     if len(args) == 0:
@@ -46,7 +48,10 @@ def multiply(*args):
 def div(A, *args):
     result = A
     for arg in args:
-        if arg == 0:
-            return "Ошибка: деление на ноль"
+        if isinstance(arg, np.ndarray):
+            if np.any(arg == 0):
+                return "Ошибка: деление на ноль"
+        elif arg == 0:
+                return "Ошибка: деление на ноль"
         result /= arg
     return result
