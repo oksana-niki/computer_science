@@ -17,6 +17,22 @@ Created on Mon Mar 31 13:30:06 2025
 
 import numpy as np
 
+
+def blank(var1, var2, var3=5, *args, **kwargs):
+    '''
+    A demo-function that do exactly nothing.
+    '''
+    print(var1)
+    print(var2)
+    print(var3)
+    print('args:')
+    for arg in args:
+        print('* ' + str(arg))
+    print('kwargs:')
+    for key in kwargs.keys():
+        print(str(key) + ':' + str(kwargs[key]))
+    return var1, var2, var3, args, kwargs
+
 # Функция сложения любого количества аргументов
 def add(*args):
     if len(args) == 0:
@@ -55,3 +71,5 @@ def div(A, *args):
                 return "Ошибка: деление на ноль"
         result /= arg
     return result
+
+
