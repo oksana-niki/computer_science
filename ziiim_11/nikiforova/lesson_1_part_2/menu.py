@@ -13,7 +13,8 @@ Created on Mon Mar 31 13:30:06 2025
 
 @licence: GPL
 @author: Никифорова О.В.
-"""# -*- coding: utf-8 -*-
+"""
+# -*- coding: utf-8 -*-
 
 def step_try_except():
 # Открываем файл с именем '1.txt' для чтения
