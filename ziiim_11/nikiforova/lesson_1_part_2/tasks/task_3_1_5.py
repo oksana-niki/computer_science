@@ -39,7 +39,6 @@ def generalized_factorial(x):
 
 
 # ======= Тесты =======
-
 test_cases = {
     4: 24,
     4.2: 32.57809605,
