@@ -15,19 +15,19 @@ def primes_less_than(n):
     """Возвращает список простых чисел меньше n"""
     return [x for x in range(2, n) if is_prime(x)]
 
-# Основной ввод с консоли (опционально можно отключить)
-if __name__ == "__main__":
-    N = int(input("Максимальное число: "))
-    print(primes_less_than(N))
+# ======= Тесты =======
+print("\n--- Tests::start ---")
+test_cases = {
+    10: [2, 3, 5, 7],
+    30: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29],
+    1: [],
+}
 
-    # Тесты
-    print("\n--- Тесты ---")
-    test_cases = {
-        10: [2, 3, 5, 7],
-        30: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29],
-        1: [],
-    }
+for test_input, expected_output in test_cases.items():
+    result = primes_less_than(test_input)
+    print(f"Вход: {test_input} → Результат: {result} → {'✅ OK' if result == expected_output else '❌ Ошибка'}")
+print("\n--- Tests::end ---")
 
-    for test_input, expected_output in test_cases.items():
-        result = primes_less_than(test_input)
-        print(f"Вход: {test_input} → Результат: {result} → {'✅ OK' if result == expected_output else '❌ Ошибка'}")
+# ======= Input =======
+N = int(input("Максимальное число: "))
+print(primes_less_than(N))
