@@ -8,7 +8,7 @@ Created on Thu Apr 17 03:36:22 2025
 
     каф. АСОиУ.
 
-    Лабораторная работа 2, Numpy. Array
+    Лабораторная работа 3, Numpy. Array
 
 @licence: GPL
 @author: Никифорова О.В.
